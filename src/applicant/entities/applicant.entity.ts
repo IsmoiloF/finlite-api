@@ -1,4 +1,3 @@
-
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class Applicant {
@@ -7,7 +6,6 @@ export class Applicant {
 
   @Column()
   name: string;
-
 
   @Column()
   phone_number: string;

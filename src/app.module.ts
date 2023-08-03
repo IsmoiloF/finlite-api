@@ -23,7 +23,7 @@ import { News } from './news/entities/news.entity';
 import { Sertficate } from './sertficate/entities/sertficate.entity';
 import { StudentWorkplace } from './student_workplace/entities/student_workplace.entity';
 import { StudentsTestimonial } from './students_testimonial/entities/students_testimonial.entity';
-
+import { AuthModule } from './auth/auth.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -55,7 +55,9 @@ import { StudentsTestimonial } from './students_testimonial/entities/students_te
     MenuModule,
     AboutModule,
     FinlitMainInfoModule,
-    StudentsTestimonialModule
+    StudentsTestimonialModule,
+    AuthModule,
+  
   ],
 })
 export class AppModule {}

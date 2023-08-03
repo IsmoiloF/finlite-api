@@ -1,10 +1,9 @@
-import { Injectable } from '@nestjs/common';
+import { HttpException, Injectable } from '@nestjs/common';
 import { CreateAdminDto } from './dto/create-admin.dto';
-import { UpdateAdminDto } from './dto/update-admin.dto';
+// import { UpdateAdminDto } from './dto/update-admin.dto';
 import { Admin } from './entities/admin.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { About } from 'src/about/entities/about.entity';
 
 @Injectable()
 export class AdminService {
@@ -24,9 +23,17 @@ export class AdminService {
 
   async findOne(id: number):Promise<Admin>{
     return await this.adminRepository.findOneBy({ id });
+    const admin = await this.adminRepository.findOneBy({id})
+    if(!admin){
+      throw new HttpException("Admin topilmadi", 404)
+    }
   }
 
   async update(id: number, dto: CreateAdminDto) {
+    const admin = await this.adminRepository.findOneBy({id})
+    if(!admin){
+      throw new HttpException("Admin topilmadi", 404)
+    }
     const newadmin = await this.adminRepository.findOne({where :{id}})
     Object.assign(newadmin, dto)
     await this.adminRepository.save(newadmin)
@@ -34,6 +41,11 @@ export class AdminService {
   }
 
   async remove(id: number) {
+    const admin = await this.adminRepository.findOneBy({id})
+    if(!admin){
+      throw new HttpException("Admin topilmadi", 404)
+    }
     await this.adminRepository.delete(id);
+   
   }
 }
