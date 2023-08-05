@@ -2,8 +2,9 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { FinlitMainInfoService } from './finlit_main_info.service';
 import { CreateFinlitMainInfoDto } from './dto/create-finlit_main_info.dto';
 import { UpdateFinlitMainInfoDto } from './dto/update-finlit_main_info.dto';
-import { ApiOperation } from '@nestjs/swagger';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Finlite_main_info')
 @Controller('finlit-main-info')
 export class FinlitMainInfoController {
   constructor(private readonly finlitMainInfoService: FinlitMainInfoService) {}

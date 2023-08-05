@@ -23,7 +23,9 @@ import { News } from './news/entities/news.entity';
 import { Sertficate } from './sertficate/entities/sertficate.entity';
 import { StudentWorkplace } from './student_workplace/entities/student_workplace.entity';
 import { StudentsTestimonial } from './students_testimonial/entities/students_testimonial.entity';
+import { AuthGuard } from './auth/auth.guard';
 import { AuthModule } from './auth/auth.module';
+import { AuthService } from './auth/auth.service';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -56,8 +58,7 @@ import { AuthModule } from './auth/auth.module';
     AboutModule,
     FinlitMainInfoModule,
     StudentsTestimonialModule,
-    AuthModule,
-  
+    AuthModule
   ],
 })
 export class AppModule {}

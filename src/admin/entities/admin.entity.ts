@@ -11,6 +11,6 @@ export class Admin {
   @Column()
   password: string;
 
-  @Column()
-  is_active: boolean;
+  // @Column()
+  // is_active: boolean;
 }

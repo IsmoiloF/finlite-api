@@ -1,8 +1,9 @@
 import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
 import { StudentsTestimonialService } from './students_testimonial.service';
 import { CreateStudentsTestimonialDto } from './dto/create-students_testimonial.dto';
-import { ApiOperation } from '@nestjs/swagger';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Student testimonial')
 @Controller('students-testimonial')
 export class StudentsTestimonialController {
   constructor(private readonly studentsTestimonialService: StudentsTestimonialService) {}

@@ -12,7 +12,14 @@ async function bootstrap() {
     .setDescription('The Finlite API description')
     .setVersion('1.0')
     .addTag('finlite')
-    .build();
+    .addBearerAuth({
+      type:'http',
+      scheme:"bearer",
+      name:"jwt",
+      description:"ok"
+    })
+    .build()
+
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('swagger', app, document);
   await app.listen(3000);

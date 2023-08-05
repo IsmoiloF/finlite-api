@@ -36,8 +36,4 @@ export class ApplicantService {
   async remove(id: number) {
     await this.applicantRepository.delete(id);
   }
-
-  async signIn(name: string): Promise<Applicant> {
-    return this.applicantRepository.findOne(({where:{name}}));
-  }
 }

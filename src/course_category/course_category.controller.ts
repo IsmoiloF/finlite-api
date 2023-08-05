@@ -10,8 +10,9 @@ import {
 import { CourseCategoryService } from './course_category.service';
 import { CreateCourseCategoryDto } from './dto/create-course_category.dto';
 import { UpdateCourseCategoryDto } from './dto/update-course_category.dto';
-import { ApiOperation } from '@nestjs/swagger';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Course_category')
 @Controller('course-category')
 export class CourseCategoryController {
   constructor(private readonly courseCategoryService: CourseCategoryService) {}

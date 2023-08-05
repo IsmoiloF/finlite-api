@@ -2,11 +2,14 @@ import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/commo
 import { SertficateService } from './sertficate.service';
 import { CreateSertficateDto } from './dto/create-sertficate.dto';
 import { UpdateSertficateDto } from './dto/update-sertficate.dto';
-import { ApiOperation } from '@nestjs/swagger';
+import { ApiOperation, ApiTags } from '@nestjs/swagger';
 
+
+@ApiTags('Sertificate')
 @Controller('sertficate')
 export class SertficateController {
   constructor(private readonly sertficateService: SertficateService) {}
+
 
   @ApiOperation({ summary: 'Sertficate qoshish'})
   @Post()

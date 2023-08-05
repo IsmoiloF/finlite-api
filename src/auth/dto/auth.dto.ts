@@ -1,7 +1,7 @@
 import { ApiProperty } from "@nestjs/swagger"
 import { IsBoolean, IsNotEmpty, IsString } from "class-validator"
 
-export class CreateAdminDto {
+export class CreateAuthDto {
     @ApiProperty({example:'username',description:'darkdp'})
     @IsNotEmpty()
     @IsString()
@@ -11,9 +11,4 @@ export class CreateAdminDto {
     @IsNotEmpty()
     @IsString()
     password:string
-
-    // @ApiProperty({example:'is_active',description:'true'})
-    // @IsNotEmpty()
-    // @IsBoolean()
-    // is_active:boolean
 }

@@ -46,6 +46,13 @@ export class AdminService {
       throw new HttpException("Admin topilmadi", 404)
     }
     await this.adminRepository.delete(id);
-   
   }
+
+  async signIn(username: string): Promise<Admin> {
+    return this.adminRepository.findOne(({where:{username}}));
+  }
+
+
+
+  
 }
