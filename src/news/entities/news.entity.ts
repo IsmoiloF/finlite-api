@@ -9,8 +9,5 @@ export class News {
   
   @Column()
   description_ru:string
-
-  @Column()
-  photo:string
 }
 

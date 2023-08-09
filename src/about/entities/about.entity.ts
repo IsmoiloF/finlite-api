@@ -11,10 +11,6 @@ export class About {
 
   @Column()
   description_ru: string;
-
-  @Column()
-  photo: string;
-  
 }
 
 

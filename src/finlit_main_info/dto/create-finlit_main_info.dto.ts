@@ -2,10 +2,6 @@ import { ApiProperty } from "@nestjs/swagger"
 import { IsNotEmpty, IsString } from "class-validator"
 
 export class CreateFinlitMainInfoDto {
-    @ApiProperty({example:'main_svg',description:'url'})
-    @IsNotEmpty()
-    @IsString()
-    main_svg:string
 
     @ApiProperty({example:'main_text_uz',description:'hufvlshui'})
     @IsNotEmpty()

@@ -9,12 +9,6 @@ export class StudentsTestimonial {
   
   @Column()
   description_ru:string
-
-  @Column()
-  photo:string
-
-  @Column()
-  video_url:string
 }
 
 

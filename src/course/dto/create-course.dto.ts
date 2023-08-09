@@ -21,9 +21,4 @@ export class CreateCourseDto {
     @IsNotEmpty()
     @IsString()
     descption_ru:string
-
-    @ApiProperty({example:'video',description:'url'})
-    @IsNotEmpty()
-    @IsString()
-    video:string
 }

@@ -26,10 +26,17 @@ import { StudentsTestimonial } from './students_testimonial/entities/students_te
 import { AuthGuard } from './auth/auth.guard';
 import { AuthModule } from './auth/auth.module';
 import { AuthService } from './auth/auth.service';
+import { MediaModule } from './media/media.module';
+import { ServeStaticModule } from '@nestjs/serve-static';
+import { join } from 'path';
+
 @Module({
   imports: [
     ConfigModule.forRoot({
       envFilePath: `.${process.env.NODE_ENV}.env`,
+    }),
+    ServeStaticModule.forRoot({
+      rootPath: join(__dirname, '..', 'uploads'),
     }),
     TypeOrmModule.forRoot({
       type: 'mysql',
@@ -58,7 +65,8 @@ import { AuthService } from './auth/auth.service';
     AboutModule,
     FinlitMainInfoModule,
     StudentsTestimonialModule,
-    AuthModule
+    AuthModule,
+    MediaModule
   ],
 })
 export class AppModule {}

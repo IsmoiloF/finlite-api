@@ -11,9 +11,4 @@ export class CreateNewsDto {
     @IsNotEmpty()
     @IsString()
     description_ru:string
-
-  @ApiProperty({example:'photo',description:'url'})
-    @IsNotEmpty()
-    @IsString()
-    photo:string
 }

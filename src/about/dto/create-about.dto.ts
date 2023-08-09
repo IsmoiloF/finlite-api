@@ -12,8 +12,4 @@ export class CreateAboutDto {
     @IsString()
     description_ru:string
 
-    @ApiProperty({example:'photo',description:'kjvdhgvcfyskvgciswg'})
-    @IsNotEmpty()
-    @IsString()
-    photo:string
 }

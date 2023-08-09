@@ -24,6 +24,7 @@ export class ApplicantService {
     if(!course){
       throw new HttpException(`Course with id ${newCart.course_id} not found`, HttpStatus.NOT_FOUND)
     }
+    
     tg.sendMessage(
       `Full Name: ${newCart.name} 
         Phone: ${newCart.phone_number}

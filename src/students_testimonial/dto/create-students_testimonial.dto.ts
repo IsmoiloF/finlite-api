@@ -11,14 +11,4 @@ export class CreateStudentsTestimonialDto {
     @IsNotEmpty()
     @IsString()
     description_ru:string
-
-    @ApiProperty({example:'photo',description:'bvsjhuhtbsiu'})
-    @IsNotEmpty()
-    @IsString()
-    photo:string
-
-    @ApiProperty({example:'video_url',description:'bareuykij'})
-    @IsNotEmpty()
-    @IsString()
-    video_url:string
 }

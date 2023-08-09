@@ -17,7 +17,4 @@ export class Course {
 
   @Column()
   descption_ru:string
-
-  @Column()
-  video:string
 }

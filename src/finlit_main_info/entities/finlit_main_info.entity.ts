@@ -2,11 +2,8 @@ import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 @Entity()
 export class FinlitMainInfo {
   @PrimaryGeneratedColumn()
-  id: number;
-
-  @Column()
-  main_svg:string
-  
+  id: number
+ 
   @Column()
   main_text_uz:string
 
